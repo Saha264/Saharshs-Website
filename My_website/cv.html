@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV | My Personal Site</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="loader" id="loader"><div class="spinner"></div></div>
+<div id="particles-js"></div>
+<header>
+  <h1>My CV</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="cv.html">CV</a>
+    <a href="text-analysis.html">Text Tool</a>
+    <a href="gallery.html">Gallery</a>
+  </nav>
+</header>
+<main>
+  <section>
+    <h2>Download CV</h2>
+    <a href="images/cv.pdf" target="_blank">Download My CV</a>
+  </section>
+</main>
+<script src="particles.min.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('loader').style.display = 'none', 1000);
+    particlesJS.load('particles-js', 'particles-config.json');
+  });
+</script>
+</body>
+</html>
