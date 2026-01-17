@@ -3,69 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Education | My Personal Site</title>
+  <meta name="description" content="Educational background of Saharsh Kallu - IIIT Hyderabad CS student">
+  <title>Education | Saharsh Kallu</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <div class="loader" id="loader"><div class="spinner"></div></div>
 <div id="particles-js"></div>
 <header>
-  <h1>My Education</h1>
+  <h1>Education</h1>
   <nav>
     <a href="index.html">Home</a>
-    <a href="education.html">Education</a>
+    <a href="education.html" class="active">Education</a>
     <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
     <a href="cv.html">CV</a>
-    <a href="text-analysis.html">Text Tool</a>
+    <a href="gallery.html">Gallery</a>
   </nav>
 </header>
 <main>
   <section>
-    <h2>Academic Journey</h2>
-    <p>Passed 10th standard with 93% from Phoenix Greens International School in 2022.
-      Top 10 in below-16 hyderabad entrepreneurship contest.
-      Passed 12th standard with 95% from FIITJEE in the MPC course.
-      Scored 1580 in SAT which is in the 99.9th percentile.
-      Currently a first year at International Institute of Information(IIIT) Hyderabad.</p>
+    <h2>🎓 Academic Journey</h2>
+    
+    <div style="margin-top: 2rem;">
+      <h3 style="color: #60a5fa; font-size: 1.5rem;">International Institute of Information Technology, Hyderabad</h3>
+      <p style="color: #93c5fd; margin: 0.5rem 0;">Bachelor of Technology in Computer Science Engineering</p>
+      <p style="color: #7a7a8c; margin: 0.5rem 0;">2023 - Present (Second Year)</p>
+      <p style="margin-top: 1rem;">Pursuing comprehensive education in Computer Science with focus on Machine Learning, Algorithms, and Software Engineering. Actively involved in research and competitive programming.</p>
+    </div>
+
+    <div style="margin-top: 2.5rem;">
+      <h3 style="color: #60a5fa; font-size: 1.5rem;">FIITJEE Junior College</h3>
+      <p style="color: #93c5fd; margin: 0.5rem 0;">Intermediate Education (MPC Stream)</p>
+      <p style="color: #7a7a8c; margin: 0.5rem 0;">2021 - 2023</p>
+      <p style="margin-top: 1rem;"><strong style="color: #e0e0e0;">95%</strong> - Excelled in Mathematics, Physics, and Chemistry</p>
+    </div>
+
+    <div style="margin-top: 2.5rem;">
+      <h3 style="color: #60a5fa; font-size: 1.5rem;">Phoenix Greens International School</h3>
+      <p style="color: #93c5fd; margin: 0.5rem 0;">Secondary Education (10th Standard)</p>
+      <p style="color: #7a7a8c; margin: 0.5rem 0;">2021 - 2022</p>
+      <p style="margin-top: 1rem;"><strong style="color: #e0e0e0;">93%</strong> - Strong academic performance across all subjects</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>🏆 Achievements & Test Scores</h2>
+    
+    <div class="projects-grid" style="margin-top: 2rem;">
+      <div class="project-card">
+        <h3>📊 SAT Score</h3>
+        <p style="font-size: 2rem; color: #60a5fa; font-weight: 700; margin: 1rem 0;">1580/1600</p>
+        <p>99.9th percentile - Demonstrated exceptional aptitude in mathematics and critical reading</p>
+      </div>
+      
+      <div class="project-card">
+        <h3>💡 Entrepreneurship Contest</h3>
+        <p style="font-size: 1.5rem; color: #60a5fa; font-weight: 700; margin: 1rem 0;">Top 10</p>
+        <p>Below-16 Hyderabad Entrepreneurship Contest - Showcased innovation and business acumen at a young age</p>
+      </div>
+    </div>
   </section>
 </main>
+
+<footer>
+  <p>&copy; 2026 Saharsh Kallu. All rights reserved.</p>
+  <p>Built with passion and powered by particles.js</p>
+</footer>
 <script src="particles.min.js"></script>
 <script>
   window.addEventListener('load', () => {
     setTimeout(() => document.getElementById('loader').style.display = 'none', 1000);
     particlesJS.load('particles-js', 'particles-config.json');
+    
+    const timestamp = new Date().toISOString();
+    console.log(`${timestamp} , view , page`);
   });
 </script>
 
 <script>
-  // Function to determine the type of element clicked/viewed
   function getElementType(element) {
     if (!element) return 'unknown';
-  
     if (element.tagName === 'IMG') return 'image';
     if (element.tagName === 'A') return 'link';
     if (element.tagName === 'TEXTAREA' || element.tagName === 'INPUT') return 'text';
     if (element.tagName === 'SELECT') return 'drop-down';
     if (element.tagName === 'BUTTON') return 'button';
     if (element.tagName.match(/^H[1-6]$/)) return 'heading';
-  
     return element.tagName.toLowerCase();
   }
   
-  // Log the view on page load
-  window.addEventListener('load', () => {
-    const timestamp = new Date().toISOString();
-    console.log(`${timestamp} , view , page`);
-  });
-  
-  // Log clicks on any element
   document.addEventListener('click', (e) => {
     const timestamp = new Date().toISOString();
     const type = 'click';
     const objectType = getElementType(e.target);
     console.log(`${timestamp} , ${type} , ${objectType}`);
   });
-  </script>
+</script>
   
 </body>
 </html>

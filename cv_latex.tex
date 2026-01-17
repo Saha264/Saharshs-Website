@@ -1,0 +1,138 @@
+% Saharsh Kallu - Professional CV
+% Compile with XeLaTeX or pdfLaTeX
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% ModernCV themes
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+% Character encoding
+\usepackage[utf8]{inputenc}
+
+% Page margins
+\usepackage[scale=0.85]{geometry}
+\setlength{\hintscolumnwidth}{3cm}
+
+% Personal data
+\name{Saharsh}{Kallu}
+\title{Computer Science Engineering Student}
+\address{International Institute of Information Technology}{Hyderabad, India}{}
+\phone[mobile]{+91~XXX~XXX~XXXX} % Add your phone number
+\email{saharsh.kallu@students.iiit.ac.in}
+\social[github]{Saha264}
+\social[linkedin]{saharsh-kallu}
+\social[instagram]{saharshreddyy.\_}
+\homepage{saha264.github.io/Saharshs-Website} % Update with your actual domain if you have one
+
+% Custom commands
+\newcommand{\cvproject}[4]{
+  \cvitem{\textbf{#1}}{#2\newline
+    \textit{Technologies:} #3\newline
+    #4}
+}
+
+\begin{document}
+
+\makecvtitle
+
+\section{Education}
+\cventry{2024--2028}{Bachelor of Technology in Computer Science Engineering}{International Institute of Information Technology}{Hyderabad, India}{}{
+  \begin{itemize}
+    \item Currently in 2nd Year
+    \item Relevant Coursework: Data Structures \& Algorithms, Operating Systems, Computer Networks, Database Management Systems
+    \item Focus Areas: Machine Learning Security, Systems Programming, Distributed Systems
+  \end{itemize}
+}
+
+\section{Technical Skills}
+\cvitem{Languages}{C, C++, Python, JavaScript, HTML/CSS, Shell Scripting, SQL}
+\cvitem{Systems}{POSIX API, Socket Programming, Multi-threading (pthreads), IPC, Memory Management}
+\cvitem{Networking}{TCP/IP Stack, UDP, Network Protocols (DNS, ARP, HTTP), Packet Analysis, libpcap}
+\cvitem{AI/ML}{Deep Learning, Computer Vision, Time-Series Analysis, TensorFlow, PyTorch, Scikit-learn}
+\cvitem{Hardware}{PCB Design, IoT Sensors (ECG, Accelerometer), Embedded Systems, Real-time Data Streaming}
+\cvitem{Tools \& Tech}{Git, GDB, Valgrind, Wireshark, Make, Linux/Unix, VS Code}
+\cvitem{Concepts}{Distributed Systems, Concurrency Control, Fault Tolerance, Data Structures (Tries, LRU Cache)}
+
+\section{Projects}
+
+\cvproject{Automated ICU Guardian: Multimodal AI System}{
+  Developed an AI-powered patient monitoring system to address ICU nursing staff shortages using multimodal data fusion.
+  \begin{itemize}
+    \item Built deep learning model for real-time ECG analysis to detect arrhythmia and cardiac irregularities
+    \item Implemented computer vision module for physical distress detection (falls, pain indicators) using pose estimation
+    \item Designed sensor fusion system combining camera vision and wearable accelerometer data to minimize false positives
+    \item Created predictive engine analyzing Electronic Health Records to forecast patient complications
+    \item Integrated custom PCB with ECG sensors for continuous biosignal streaming
+  \end{itemize}
+}{Deep Learning, Computer Vision, IoT, Python, PCB Design, Healthcare AI}{
+  \textit{GitHub:} github.com/Saha264/final-codes-ajas
+}
+
+\cvproject{LangOS: Distributed File System}{
+  Designed and implemented a high-performance distributed file system with three-tier architecture modeled after NFS.
+  \begin{itemize}
+    \item Developed Name Server with Trie-based file lookup (O(1) access) and LRU caching for request optimization
+    \item Implemented Storage Servers supporting dynamic scaling (hot-plugging) and asynchronous replication
+    \item Solved Readers-Writers problem with sentence-level locking for concurrent file editing
+    \item Built fault-tolerant system with heartbeat monitoring and automatic failover to redundant servers
+    \item Created custom TCP-based protocol for file streaming, ACK handling, and remote command execution
+  \end{itemize}
+}{C, TCP Sockets, pthreads, POSIX, Distributed Systems}{
+  \textit{GitHub:} github.com/Saha264/Distributed-File-Systems
+}
+
+\cvproject{C-Shark: Terminal-Based Network Traffic Analyzer}{
+  Built a lightweight packet sniffer for real-time network traffic analysis and forensics.
+  \begin{itemize}
+    \item Implemented promiscuous mode NIC interaction to capture raw Ethernet frames
+    \item Developed recursive decapsulation engine parsing Layer 2 (Ethernet), Layer 3 (IP), and Layer 4 (TCP/UDP) headers
+    \item Created dual-view payload visualization (Hexadecimal + ASCII) for deep packet inspection
+    \item Built dynamic protocol filtering (DNS, TCP, ARP) with in-memory session storage
+    \item Engineered interface discovery system for multi-device support (WLAN, Docker, Loopback)
+  \end{itemize}
+}{C, libpcap, Network Forensics, Linux}{
+  \textit{GitHub:} github.com/Saha264/Terminal-Packet-Sniffer
+}
+
+\cvproject{Unix Shell \& Reliable UDP Protocol}{
+  Systems programming project implementing a full-featured shell and custom reliable transport protocol.
+  \begin{itemize}
+    \item Built shell with process management using fork/exec, supporting foreground/background job control
+    \item Implemented recursive piping mechanism with file descriptor management for arbitrary command chains
+    \item Designed Reliable UDP (RUDP) with custom packet headers (Seq/Ack numbers, flags, window size)
+    \item Developed sliding window flow control algorithm optimizing throughput vs. network congestion
+    \item Created retransmission engine with RTT tracking and timeout-based packet recovery
+  \end{itemize}
+}{C, POSIX API, Socket Programming, Networking}{
+  \textit{GitHub:} github.com/Saha264/C-Shell
+}
+
+\cvproject{Personal Portfolio Website}{
+  Modern, responsive portfolio website with interactive features and clean design.
+  \begin{itemize}
+    \item Designed responsive UI with dark/light theme toggle using CSS variables and localStorage
+    \item Implemented typing animation, particle effects (particles.js), and smooth navigation
+    \item Integrated GitHub Stats API with lazy loading and graceful error handling
+    \item Built resume preview functionality with embedded PDF viewer
+  \end{itemize}
+}{HTML/CSS, JavaScript, Web Design, Particles.js}{
+  \textit{Live:} saha264.github.io/Saharshs-Website
+}
+
+\section{Interests \& Activities}
+\cvitem{Academic}{Machine Learning Security, Competitive Programming, Systems Research}
+\cvitem{Sports}{American Football, Cricket, Basketball | Dallas Mavericks Fan}
+\cvitem{Entertainment}{Cinema Enthusiast, Music (Anirudh compositions)}
+
+\section{Additional Information}
+\cvitem{}{
+  \begin{itemize}
+    \item Strong foundation in systems programming with focus on performance optimization and low-level code
+    \item Experience in building fault-tolerant distributed systems and real-time applications
+    \item Passionate about intersection of AI/ML and cybersecurity, particularly adversarial attacks
+    \item Active learner exploring kernel development and embedded systems
+  \end{itemize}
+}
+
+\end{document}

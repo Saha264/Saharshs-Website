@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skills | My Personal Site</title>
+  <meta name="description" content="Technical skills and expertise of Saharsh Kallu">
+  <title>Skills | Saharsh Kallu</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,60 +15,141 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="education.html">Education</a>
-    <a href="skills.html">Skills</a>
+    <a href="skills.html" class="active">Skills</a>
+    <a href="projects.html">Projects</a>
     <a href="cv.html">CV</a>
-    <a href="text-analysis.html">Text Tool</a>
     <a href="gallery.html">Gallery</a>
   </nav>
 </header>
 <main>
   <section>
-    <h2>My Skills</h2>
-    <ul>
-      <li>JavaScript</li>
-      <li>HTML/CSS</li>
-      <li>React, Node.js</li>
-      <li>Python, SQL</li>
-    </ul>
+    <h2>💻 Technical Expertise</h2>
+    <p style="text-align: center; margin-bottom: 2rem; color: #b0b0b0;">A comprehensive overview of my technical skills and proficiencies</p>
+    
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>🐍 Programming Languages</h3>
+        <ul>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>C/C++</li>
+          <li>SQL</li>
+          <li>HTML/CSS</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>🤖 Machine Learning & AI</h3>
+        <ul>
+          <li>TensorFlow</li>
+          <li>PyTorch</li>
+          <li>Scikit-learn</li>
+          <li>Neural Networks</li>
+          <li>Adversarial ML</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>🌐 Web Development</h3>
+        <ul>
+          <li>React.js</li>
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>Responsive Design</li>
+          <li>REST APIs</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>🛠️ Tools & Technologies</h3>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+          <li>Jupyter Notebooks</li>
+          <li>Linux/Unix</li>
+          <li>npm/pip</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>📊 Data Science</h3>
+        <ul>
+          <li>NumPy & Pandas</li>
+          <li>Data Visualization</li>
+          <li>Statistical Analysis</li>
+          <li>Matplotlib/Seaborn</li>
+          <li>Data Preprocessing</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>🏗️ Core CS Concepts</h3>
+        <ul>
+          <li>Data Structures</li>
+          <li>Algorithms</li>
+          <li>Object-Oriented Programming</li>
+          <li>Database Management</li>
+          <li>Problem Solving</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🎯 Current Focus Areas</h2>
+    <div class="projects-grid" style="margin-top: 2rem;">
+      <div class="project-card">
+        <h3>🔒 ML Security</h3>
+        <p>Deepening knowledge in adversarial attacks and defense mechanisms in machine learning models. Exploring robustness in neural network training.</p>
+      </div>
+      
+      <div class="project-card">
+        <h3>🏆 Competitive Programming</h3>
+        <p>Building problem-solving skills through algorithmic challenges. Participating in coding contests and improving optimization techniques.</p>
+      </div>
+      
+      <div class="project-card">
+        <h3>💡 Full-Stack Development</h3>
+        <p>Expanding web development skills with modern frameworks and best practices. Creating responsive and user-friendly applications.</p>
+      </div>
+    </div>
   </section>
 </main>
+
+<footer>
+  <p>&copy; 2026 Saharsh Kallu. All rights reserved.</p>
+  <p>Built with passion and powered by particles.js</p>
+</footer>
 <script src="particles.min.js"></script>
 <script>
   window.addEventListener('load', () => {
     setTimeout(() => document.getElementById('loader').style.display = 'none', 1000);
     particlesJS.load('particles-js', 'particles-config.json');
+    
+    const timestamp = new Date().toISOString();
+    console.log(`${timestamp} , view , page`);
   });
 </script>
 
 <script>
-  // Function to determine the type of element clicked/viewed
   function getElementType(element) {
     if (!element) return 'unknown';
-  
     if (element.tagName === 'IMG') return 'image';
     if (element.tagName === 'A') return 'link';
     if (element.tagName === 'TEXTAREA' || element.tagName === 'INPUT') return 'text';
     if (element.tagName === 'SELECT') return 'drop-down';
     if (element.tagName === 'BUTTON') return 'button';
     if (element.tagName.match(/^H[1-6]$/)) return 'heading';
-  
     return element.tagName.toLowerCase();
   }
   
-  // Log the view on page load
-  window.addEventListener('load', () => {
-    const timestamp = new Date().toISOString();
-    console.log(`${timestamp} , view , page`);
-  });
-  
-  // Log clicks on any element
   document.addEventListener('click', (e) => {
     const timestamp = new Date().toISOString();
     const type = 'click';
     const objectType = getElementType(e.target);
     console.log(`${timestamp} , ${type} , ${objectType}`);
   });
-  </script>
+</script>
   
 </body>
 </html>
