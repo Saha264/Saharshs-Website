@@ -136,6 +136,7 @@ nav a.active {
   border-radius: 50px;
   position: relative;
   transition: background 0.3s ease;
+  pointer-events: none;
 }
 
 .theme-toggle-btn::before {
@@ -148,6 +149,7 @@ nav a.active {
   top: 2px;
   left: 2px;
   transition: transform 0.3s ease;
+  pointer-events: none;
 }
 
 [data-theme="light"] .theme-toggle-btn::before {
@@ -156,6 +158,7 @@ nav a.active {
 
 .theme-icon {
   font-size: 1.2rem;
+  pointer-events: none;
 }
 
 /* === Main Content === */

@@ -10,7 +10,7 @@
 <body>
 
 <!-- Theme Toggle -->
-<div class="theme-toggle" onclick="toggleTheme(event)" title="Toggle dark/light mode">
+<div class="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">
   <span class="theme-icon">🌙</span>
   <div class="theme-toggle-btn"></div>
   <span class="theme-icon">☀️</span>
@@ -164,8 +164,7 @@
 <script src="particles.min.js"></script>
 <script>
   // Theme Toggle
-  function toggleTheme(event) {
-    if (event) event.stopPropagation();
+  function toggleTheme() {
     const html = document.documentElement;
     const currentTheme = html.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
