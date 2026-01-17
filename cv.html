@@ -6,6 +6,13 @@
   <meta name="description" content="Download Saharsh Kallu's CV/Resume">
   <title>CV | Saharsh Kallu</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    // Load theme IMMEDIATELY before page renders to prevent flash
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
 </head>
 <body>
 
@@ -160,8 +167,7 @@
     localStorage.setItem('theme', newTheme);
   }
 
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  document.documentElement.setAttribute('data-theme', savedTheme);
+  // Load saved theme is already done in <head>
 
   const backToTop = document.getElementById('backToTop');
   window.addEventListener('scroll', () => {

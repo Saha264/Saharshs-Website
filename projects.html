@@ -6,6 +6,13 @@
   <meta name="description" content="Projects and work by Saharsh Kallu">
   <title>Projects | Saharsh Kallu</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    // Load theme IMMEDIATELY before page renders to prevent flash
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
 </head>
 <body>
 
@@ -172,9 +179,7 @@
     localStorage.setItem('theme', newTheme);
   }
 
-  // Load saved theme
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  document.documentElement.setAttribute('data-theme', savedTheme);
+  // Load saved theme is already done in <head>
 
   // Back to Top Button
   const backToTop = document.getElementById('backToTop');

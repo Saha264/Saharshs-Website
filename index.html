@@ -6,6 +6,13 @@
   <meta name="description" content="Saharsh Kallu - Computer Science Engineering student at IIIT Hyderabad, specializing in Machine Learning and Competitive Programming">
   <title>Saharsh Kallu | CS Student & ML Enthusiast</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    // Load theme IMMEDIATELY before page renders to prevent flash
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
 </head>
 <body>
 
@@ -105,9 +112,7 @@
     localStorage.setItem('theme', newTheme);
   }
 
-  // Load saved theme
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  document.documentElement.setAttribute('data-theme', savedTheme);
+  // Load saved theme is already done in <head>
 
   // Back to Top Button
   const backToTop = document.getElementById('backToTop');
